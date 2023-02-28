@@ -39,10 +39,11 @@ public abstract class Aplicant{
 	public void setPunctaj(int punctaj) {
 		this.punctaj = punctaj;
 	}
-	
-	
 
-	
+	public void setDenumireProiect(String[] denumireProiect) {
+		this.denumireProiect = denumireProiect;
+	}
+
 	public Aplicant() {
 		super();
 		// TODO Auto-generated constructor stub
