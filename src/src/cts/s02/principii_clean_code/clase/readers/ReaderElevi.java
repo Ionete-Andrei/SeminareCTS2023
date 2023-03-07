@@ -17,18 +17,11 @@ public class ReaderElevi extends ReaderAplicant{
         List<Aplicant> elevi = new ArrayList<Aplicant>();
 
         while (input2.hasNext()) {
-            String nume = input2.next();
-            String prenume = input2.next();
-            int varsta = input2.nextInt();
-            int punctaj = input2.nextInt();
-            int nr = input2.nextInt();
-            String[] vect = new String[5];
-            for (int i = 0; i < nr; i++)
-                vect[i] = input2.next();
-            int clasa = input2.nextInt();
-            String tutore = input2.next();
-            Elev e = new Elev(nume, prenume, varsta, punctaj, nr, vect, clasa, tutore);
-            elevi.add(e);
+           Elev elev = new Elev();
+           super.readFromFile(input2, elev);
+           elev.setClasa(input2.nextInt());
+           elev.setTutore(input2.next());
+            elevi.add(elev);
         }
 
         input2.close();

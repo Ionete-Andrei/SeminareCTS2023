@@ -13,8 +13,11 @@ public class Program {
 		ReaderAngajat readerAngajat = new ReaderAngajat();
 		try {
 			listaAngajati = readerAngajat.readAplicants("angajati.txt");
-			for(Aplicant angajat:listaAngajati)
+			for(Aplicant angajat:listaAngajati) {
 				System.out.println(angajat.toString());
+				angajat.afisareFinantare();
+				angajat.afisareStatus();
+			}
 		} catch (FileNotFoundException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
